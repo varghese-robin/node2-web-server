@@ -48,7 +48,15 @@ app.get('/', (req,res) => {
 app.get('/about', (req, res) => {
     // res.send("<h1>About Page</h2>");
     res.render('about.hbs', {
-        pageTitle: "About this Page"
+        pageTitle: "About this Page",
+        welcomeMessage: "Random About message"
+    });
+});
+
+app.get('/projects', (req,res) => {
+    res.render('projects.hbs', {
+        pageTitle: "Projects",
+        welcomeMessage: "Portfolio Page can be viewed here"
     });
 });
 
